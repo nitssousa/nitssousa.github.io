@@ -54,17 +54,20 @@
 				</div>
 			</article>
 			<article id="generator" class="container box style1 left">
-				<a href="#" class="image fit"><img src="images/pic01.jpg" alt="" /></a>
-				<div class="inner">
-					<header>
-						<h2>Gerar um número random entre valores</h2>
-					</header>
+				<div>
 					<label>Valores entre</label>
 					<input type="number" id="first_number" />
 					e 
 					<input type="number" id="second_number"/>
 					
 					<span id="result" ></span>
+					<button id="gerar">Gerar</button>
+				</div>
+				<div class="inner">
+					<header>
+						<h2>Gerar um número random entre valores</h2>
+					</header>
+					
 				</div>
 			</article>
 
@@ -307,6 +310,15 @@
 				</ul>
 			</div>
 		</section>
-
+		<script>
+			function randomIntFromInterval(min,max){
+    				return Math.floor(Math.random()*(max-min+1)+min);
+			}
+			$("#gerar").click(function(){
+				first = $("#first_number").val();
+				second = $("#second_number").val();
+				$("#result").val(randomIntFromInterval(first,second));
+			});
+		</script>
 	</body>
 </html>
