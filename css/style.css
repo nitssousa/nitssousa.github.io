@@ -550,7 +550,10 @@
 				{
 					background: rgba(58,57,57,0.025);
 				}
-
+			input#first_number,
+			input#second_number{
+				width: 100px;
+			}
 	/* Box */
 
 		.box
@@ -1114,4 +1117,84 @@
 			.poptrox-popup:hover .closer:hover
 			{
 				opacity: 1.0;
+			}
+
+
+			/* Novo css  */
+
+			#generator .inner{
+				margin-right: 0;
+				padding-right: 0;
+			}
+			#generator header{
+				margin-bottom: 22px;
+			}
+			.f-r{
+				float: right;
+			}
+			.result-container{
+				margin-left: 30px;
+				display:inline-block;
+			}
+			.result-container.active #result{
+				-moz-transform:    rotate(-35deg);
+			   -webkit-transform: rotate(-35deg);
+			   -ms-transform:     rotate(-35deg);
+			   -o-transform:      rotate(-35deg);
+			   position: absolute;
+			   z-index: 2;
+			   color: white;
+			   top: 0;
+			   left: -14px;
+			   font-weight: 500;
+			}
+			.result-container.active{
+				margin: 0 0 0 400px;
+			    position: absolute;
+			    display: block;
+			    color: blue;
+			    width: 0px;
+			    height: 0px;
+			    border-right: 50px solid transparent;
+			    border-bottom: 35px solid blue;
+			    border-left: 50px solid transparent;
+			   -moz-transform:    rotate(35deg);
+			   -webkit-transform: rotate(35deg);
+			   -ms-transform:     rotate(35deg);
+			   -o-transform:      rotate(35deg);
+			}
+			.result-container.active:before {
+				border-bottom: 50px solid blue;
+				border-left: 21px solid transparent;
+				border-right: 21px solid transparent;
+				position: absolute;
+				height: 0;
+				width: 0;
+				top: -23px;
+				left: -39px;
+				display: block;
+				content: '';
+			   -webkit-transform: rotate(-35deg);
+			   -moz-transform:    rotate(-35deg);
+			   -ms-transform:     rotate(-35deg);
+			   -o-transform:      rotate(-35deg);
+
+			}
+			.result-container.active:after {
+						   
+			    position: absolute;
+			    display: block;
+			    color: red;
+			    top: 3px;
+			    left: -58px;
+			    width: 0px;
+			    height: 0px;
+			    border-right: 50px solid transparent;
+			    border-bottom: 35px solid blue;
+			    border-left: 50px solid transparent;
+			   -webkit-transform: rotate(-70deg);
+			   -moz-transform:    rotate(-70deg);
+			   -ms-transform:     rotate(-70deg);
+			   -o-transform:      rotate(-70deg);
+			   content: '';
 			}

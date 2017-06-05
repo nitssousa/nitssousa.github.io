@@ -54,20 +54,23 @@
 				</div>
 			</article>
 			<article id="generator" class="container box style1 left">
-				<div>
-					<label>Valores entre</label>
-					<input type="number" id="first_number" />
-					e 
-					<input type="number" id="second_number"/>
-					
-					<span id="result" ></span>
-					<button id="gerar">Gerar</button>
-				</div>
+				
 				<div class="inner">
 					<header>
 						<h2>Gerar um número random entre valores</h2>
 					</header>
 					
+				</div>
+				<div class="form-container">
+					<label>Valores entre</label>
+					<input type="number" id="first_number" />
+					e 
+					<input type="number" id="second_number"/>
+					
+					<div class="result-container">
+						<span id="result" ></span>
+					</div>
+					<button class="button btn btn-default f-r" id="gerar">Gerar</button>
 				</div>
 			</article>
 
@@ -312,12 +315,14 @@
 		</section>
 		<script>
 			function randomIntFromInterval(min,max){
-    				return Math.floor(Math.random()*(max-min+1)+min);
+				
+    				return Math.floor(Math.random() * (max - min + 1)) + parseInt(min);
 			}
 			$("#gerar").click(function(){
 				first = $("#first_number").val();
 				second = $("#second_number").val();
 				$("#result").text(randomIntFromInterval(first,second));
+				$("#result").parent().addClass("active");
 			});
 		</script>
 	</body>
